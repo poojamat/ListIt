@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/item_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin" />
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:onClick="updateItem"
+            android:scrollHorizontally="true"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/item_Remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="@android:color/transparent"
+            android:text="X"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/item_Amazon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_amazon"
+ />
+        <ImageButton
+            android:id="@+id/item_Calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_calender"
+            />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
