@@ -10,13 +10,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <CheckBox
+<!--        <CheckBox
             android:id="@+id/item_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginRight="@dimen/fab_margin"
-            android:layout_marginTop="@dimen/fab_margin" />
+            android:layout_marginTop="@dimen/fab_margin" />-->
 
 
         <TextView
@@ -39,7 +39,30 @@
             android:text="X"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/item_Share"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@android:color/transparent"
+            android:text="X"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="25sp" />
+
         <!-- android:layout_below="@+id/person_name"-->
+        <!--<Button
+            android:id="@+id/item_Share"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@android:color/transparent"
+            android:text="X"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="25sp" />-->
 
     </LinearLayout>
 

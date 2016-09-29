@@ -2,41 +2,60 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/fab_margin"
+
+    android:background="@mipmap/ic_watermark"
     android:orientation="vertical"
-    android:background="@mipmap/ic_watermark">>
+    android:scaleType="fitXY">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@android:color/darker_gray"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/addItem_text"
+                android:id="@+id/ListName_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
                 android:layout_weight="1"
+                android:background="@android:color/transparent"
                 android:enabled="true"
-                android:hint="To Do"
                 android:inputType="text"
                 android:textColor="@android:color/black"
                 android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/addItem_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="@android:color/transparent"
+                android:enabled="true"
+                android:inputType="text"
+                android:text="Add Item"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/addItemButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/fab_margin"
                 android:background="@android:color/transparent"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
                 android:onClick="addItem"
                 android:text="+"
                 android:textSize="25sp" />
@@ -55,13 +74,13 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:fitsSystemWindows="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
         android:layout_marginBottom="-32dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="@dimen/fab_margin"
+        android:fitsSystemWindows="true"
         android:onClick="emailToDoList"
         android:src="@android:drawable/ic_dialog_email" />
 

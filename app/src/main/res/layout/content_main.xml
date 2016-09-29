@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/fab_margin"
+
     android:orientation="vertical"
-    android:padding="@dimen/fab_margin"
-    android:background="@mipmap/ic_watermark">
+    android:scaleType="fitXY">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/addList_text"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/fab_margin"
-            android:layout_weight="1"
-            android:enabled="true"
-            android:inputType="text"
-            android:text="Organize"
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
+            android:layout_marginTop="50dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/addListButton"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/addList_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:enabled="true"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+            <!--android:text="Organize"-->
+            <Button
+                android:id="@+id/addListButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="@android:color/transparent"
+                android:onClick="addItem"
+                android:text="+"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/UserLists"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:onClick="addItem"
-            android:text="+"
-            android:textSize="25sp" />
+            android:background="@mipmap/ic_watermark"
+            android:paddingBottom="@dimen/fab_margin"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin"
+            android:paddingTop="@dimen/fab_margin"></android.support.v7.widget.RecyclerView>
     </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/UserLists"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/fab_margin"
-        android:paddingTop="@dimen/fab_margin"></android.support.v7.widget.RecyclerView>
-</LinearLayout>
+</RelativeLayout>
